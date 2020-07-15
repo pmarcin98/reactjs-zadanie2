@@ -1,0 +1,17 @@
+.main-users form button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: 3px solid #0066ff;
+    background-color: #0066ff;
+    color: #fff;
+    outline: 0;
+   
+}
+
+.main-users form button:hover {
+    background-color: #003399;
+    border: 3px solid #003399;
+    cursor: pointer;
+
+}
