@@ -15,11 +15,14 @@ class Users extends Component {
     addUser = (e) => {
         e.preventDefault();
 
+        if (this._inputName.value === '') {
+            return;
+        }
+
         let newUser = {
             id: Date.now(),
             name: this._inputName.value
         }
-        /* console.log(newUser); */
 
         this.setState((state) => {
             return({
@@ -40,14 +43,23 @@ class Users extends Component {
         })
     }
 
+    removeAllUser = () => {
+        this.setState(() => {
+            return({
+                users: []
+            });
+        })
+    }
+
     render() {
 
         return(
             <div className="main-users">
                 <form onSubmit={this.addUser}> 
                     <input ref={(element) => {this._inputName = element;}} type="text" placeholder="Enter name"/>
-                    < Buttons />
+                    < Buttons  removeAllUserMethod={this.removeAllUser} />
                 </form>
+                
                 < UsersList usersList={this.state.users} removeUserMethod={this.removeUser} />
             </div>
         );

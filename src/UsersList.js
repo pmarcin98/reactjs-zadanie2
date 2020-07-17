@@ -13,27 +13,4 @@ function UsersList(props) {
 
 }
 
-/* class UsersList extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            usersList: ['Piotr', 'Karol']
-        };
-    }
-    
-
-    render() {
-
-        const listItems = this.state.usersList.map((user, index) => {
-        return <li key={index}>{user} <span>X</span></li>
-          });
-        return (
-            <ul className="list">
-                {listItems}
-            </ul>
-        );
-    }
-} */
-
 export default UsersList;

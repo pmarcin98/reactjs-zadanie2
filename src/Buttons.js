@@ -4,9 +4,10 @@ import './Buttons.css';
 function Buttons(props) {
   
     return(
-        
-        <button type="submit">Add user</button>
-        
+        <div className="buttons">
+            <button type="submit">Add user</button>
+            <button type="reset" onClick={() => props.removeAllUserMethod()}>Clear</button>
+        </div>
    );   
 }
   
